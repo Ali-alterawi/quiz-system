@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- link style css  -->
+    <link rel="stylesheet" href="../CSS/QuestionStyle.css">
+    <!-- link bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- link icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION</title>
+
+</head>
+
+<body>
+
+    <!-- Start Header -->
+    <header class="navBar">
+        <nav class="header" id="header">
+            <div class="navcontainer">
+                <a href="../Pages/WelcomePage.html" class="logo ms-5"><img src="../images/LogoQuizTopia.png" alt="Logo" height="60"></a>
+                <ul class="main-nav">
+                    <li><a href="../Pages/WelcomePage.html" style="  font-family: 'Cairo', sans-serif;"><ion-icon name="home-outline"></ion-icon> &nbsp;&nbsp;Home</a></li>
+                    <li><a href="../index.html">Log Out &nbsp;<ion-icon name="log-in-outline"></ion-icon></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+
+    <div class="container">
+        <!-- section number of Question -->
+        <div class="containerNumber">
+
+            <div class="parent-circle">
+                <div class="circle" id="num">
+                    <h3>1</h3>
+                </div>
+                <div class="circle" id="num1">
+                    <h3>2</h3>
+                </div>
+                <div class="circle" id="num2">
+                    <h3>3</h3>
+                </div>
+                <div class="circle" id="num3">
+                    <h3>4</h3>
+                </div>
+                <div class="circle " id="num4">
+                    <h3>5</h3>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <!-- section number of Question -->
+
+        <!-- section timer -->
+        <div class="container-timer">
+            <i class='bx bx-time-five'></i>
+            <span class="time" id="time"></span>
+        </div>
+        <!-- section timer -->
+
+
+
+
+        <!-- section Question -->
+
+        <div class="container-Qs">
+            <div class="header">
+                <h1 id="question"></h1>
+            </div>
+            <div class="answers">
+                <div class="container-radio">
+
+                    <form id="questionForm">
+                        
+                        <div class="parent">
+                            <label><input checked='true' id="a" value="a" type="radio" class="radio" name="answers" placeholder="A"/><span>A</span></label>
+                            <label for="a" id="answerA"></label>
+                        </div>
+                        <div class="parent">
+                            <label><input id="b" value="b" type="radio" class="A" name="answers"/><span>B</span></label>
+
+                            <label for="b" id="answerB"></label>
+                        </div>
+                        <div class="parent">
+                            <label><input id="c" value="c" type="radio" class="A" name="answers"/><span>C</span></label>
+                            <label for="c" id="answerC"></label>
+                        </div>
+
+                        <div class="container-next">
+
+                            <button id="stop" onclick="goToResultPage()" class="sub" >submit Quiz</button>
+
+                            <button id="next" type="submit" class="next"><i class='bx bx-chevron-right'></i></button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section footer -->
+    <footer class="footer text-center text-lg-start shadow-lg" id="footerEdit">
+        <!-- Copyright -->
+        <div class="text-center p-3">© 2023 Copyright, QuizTopia Team.</div>
+        <!-- Copyright -->
+    </footer>
+    <!-- section footer -->
+
+    <!-- script -->
+    <script src="../Js/QuestionPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- script -->
+</body>
+
+</html>

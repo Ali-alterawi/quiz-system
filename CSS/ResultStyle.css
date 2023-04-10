@@ -1,0 +1,268 @@
+body {
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(36, 255, 0, 1) 100%);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif;
+
+}
+
+#res {
+  margin-top: 3rem;
+}
+
+#result,
+#res {
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgb(27, 25, 25);
+}
+
+#resultStatus {
+  margin-top: 100px;
+  font-family: 'Ubuntu';
+
+}
+
+#resultButton {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(6, 190, 24, 1) 0%, rgba(36, 255, 0, 1) 100%);
+  box-shadow: 1px 3px 1px rgb(121, 112, 112);
+  text-shadow: 1px 1px 1px rgb(226, 219, 219);
+  font-family: 'Ubuntu';
+}
+
+
+#tableContainer {
+  height: 500px;
+}
+
+
+#footerEdit {
+  background-color: rgba(6, 190, 24, 0.4);
+}
+
+
+.lineUp {
+  animation: 4s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.char {
+  font-size: 40px;
+  height: 40px;
+  animation: an 1s ease-out 1 both;
+  display: inline-block;
+
+}
+
+@keyframes an {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+
+
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  #res {
+    margin-top: 8rem;
+    font-size: medium;
+  }
+
+  #result {
+    font-size: x-large;
+  }
+
+}
+
+
+
+/* Start Header */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #000000;
+  --main-transition: 0.3s;
+}
+
+.navBar {
+  background: #fff0
+}
+
+.navcontainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .navcontainer {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.header {
+  position: relative;
+
+}
+
+.header .navcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.header .navcontainer a {
+  text-decoration: none;
+}
+
+.header .navcontainer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.header .main-nav {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .header .main-nav {
+    margin: auto;
+  }
+}
+
+.header .main-nav>li>a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  overflow: hidden;
+  font-size: 18px;
+  transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+  .header .main-nav>li>a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+.header .main-nav>li>a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  top: 0;
+  left: -100%;
+  transition: var(--main-transition);
+}
+
+.header .main-nav>li>a:hover {
+  color: var(--main-color);
+  background-color: #fafafa6c;
+}
+
+.header .main-nav>li>a:hover::before {
+  left: 0;
+}
+
+/* End Header */
+/* 
+/start result Status Button /
+/ correct/ */
+.resultStatusButtonCorrect{
+background: #ebf9f1;
+border-radius: 22px;
+width: 69px;
+height: 31px;
+border-color: transparent;
+color: #1f9254;
+font-size: 15px;
+}
+
+/* / incorrect/ */
+.resultStatusButtonInCorrect{
+background: #fbe7e8;
+border-radius: 22px;
+width: 69px;
+height: 31px;
+border-color: transparent;
+color: red;
+font-size: 15px;
+}
+
+/* /end result Status Button / */
+
+#resultTable{
+  background-color: rgba(255, 255, 255, 0.162);
+  font-family: 'Ubuntu';
+}

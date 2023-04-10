@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../CSS/ResultStyle.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
+    <title>QUIZ RESULT</title>
+  </head>
+  <body>
+
+
+
+     <!-- Start Header -->
+     <header class="navBar">
+      <nav class="header" id="header">
+          <div class="navcontainer">
+              <a href="../index.html" class="logo ms-5"><img src="../images/LogoQuizTopia.png" alt="Logo" height="60"></a>
+              <ul class="main-nav">
+                  <li><a href="../index.html" style="  font-family: 'Cairo', sans-serif;"><ion-icon name="home-outline"></ion-icon> &nbsp;&nbsp;Home</a></li>
+                  <li><a href="../index.html">Log Out &nbsp;<ion-icon name="log-in-outline"></ion-icon></a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+  <!-- End Header -->
+
+
+
+
+    <!-- HERO SECTION -->
+    <!-- In case Failed: res= "Unfortunately! You have Failed the Quiz", result= "FAILED" -->
+    <div class="container">
+      <div class="px-4 py-5 my-5 text-center">
+        <h1 class="fw-bold text-light char" id="res">
+          Congratulations! You have passed the Quiz
+        </h1>
+        <img class="d-block mx-auto mb-4" src="../images/pass.png"  alt="" width="200" id="res_img"/>
+        <h1 class="display-5 fw-bold text-light lineUp" id="result">PASSED !</h1>
+      </div>
+    </div>
+
+    <!-- RESULT SECTION -->
+    <div class="container bg-transparent shadow-sm">
+      <div class="row text-center" id="resultStatus">
+        <h1 style="font-family: 'Nunito'; font-weight: bold; text-shadow: 1px 3px 1px rgba(86, 82, 82, 0.482);">RESULT</h1>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <img src="../images/icon1.png" alt="Icon 1" class="img-fluid icon" id="img-result1"/>
+              </div>
+              <h5 class="card-title text-center">5 Question</h5>
+              <p class="card-text text-center">Number of Questions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <img src="../images/iconTimer.png" alt="Icon 2" class="img-fluid icon" id="img-result2"/>
+              </div>
+              <h5 class="card-title text-center">10 min</h5>
+              <p class="card-text text-center">Total duration of the quiz</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <img src="../images/icon star correct.png" alt="Icon 3" class="img-fluid icon" id="img-result3"/>
+              </div>
+              <h5 class="card-title text-center" id="correctAns">4/5</h5>
+              <p class="card-text text-center">Correct Answers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <img src="../images/icon star.png" alt="Icon 4" class="img-fluid icon" id="img-result4"/>
+              </div>
+              <h5 class="card-title text-center" id="incorrectAns">1/5</h5>
+              <p class="card-text text-center">Incorrect Answers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-lg rounded-6 my-2 fw-bold px-5 text-light" id="resultButton" type="submit">
+            Show Answers
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-5 justify-content-center" id="divTable">
+      <div class="col-md-9 table-responsive-lg">
+        <table class="table table-sm table-hover table-bordered text-center table-striped" id="resultTable">
+            <thead id="headTable"></thead>
+            <tbody id="bodyTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ========================= footer ========================= -->
+    <footer class="footer text-center text-lg-start shadow-lg" id="footerEdit">
+      <!-- Copyright -->
+      <div class="text-center p-3">© 2023 Copyright, QuizTopia Team.</div>
+      <!-- Copyright -->
+    </footer>
+    <!-- ========================= footer ========================= -->
+
+
+
+  
+   <script src="../JS/ResultPage.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous">
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
