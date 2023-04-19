@@ -1,0 +1,201 @@
+:root {
+    --first-color: #0A2647;
+    --second-color: #2C74B3;
+    --backgroungImgColor: #4D47C3;
+    --White-color: #fff;
+}
+
+
+
+/* start nav */
+
+.h-menu {
+    background-color: var(--second-color);
+}
+
+.nav-edit-color{
+    background-color: #0A2647;
+    font-family: 'Righteous';
+    box-shadow: inset 0px -11px 8px -10px #000000;
+}
+
+
+.nav-edit{
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-edit:hover {
+    color: var(--second-color);
+}
+
+
+.loginBtn{
+    color: white;
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    transition: background-color 0.5s;
+}
+
+.loginBtn:hover{
+    color: white;
+    background-color: var(--backgroungImgColor);
+    
+}
+
+
+#loginBtn{
+    color: white;
+    background-color: #2C74B3;
+    border: 1px solid rgba(255, 255, 255, 0.819);
+    transition: background-color 1s, border 1s;
+  }
+  
+  
+    #loginBtn:hover{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.114);
+    background-color: #0a264768;
+    
+    }
+
+    .nav-edit-color{
+        background-color: #0A2647;
+        
+        font-family: 'Righteous';
+    }
+/* end nav */
+
+
+
+
+
+
+/* #nav-edit-color{
+    background-color: #0A2647;
+    box-shadow: inset 0px -11px 8px -10px #000000;
+    font-family: 'Righteous';
+}
+
+
+#nav-edit{
+    color: white;
+
+}
+
+
+#svg-icon{
+    color: #2C74B3;
+}
+
+#loginBtn{
+    color: white;
+    background-color: #2C74B3;
+    border: 1px solid rgba(255, 255, 255, 0.819);
+    transition: background-color 1s, border 1s;
+}
+
+
+    #loginBtn:hover{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.114);
+    background-color: #0a264768;
+    
+    } */
+
+
+
+#hero{
+    background-color: #0A2647;
+    background-image: url(../images/crissxcross.png);
+    border: 5%;
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 20%);
+}
+
+#hero-mainText{
+    font-family: 'Righteous';
+
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+#hero-bodyText{
+    color:#2C74B3;
+    text-shadow: 0 3px 1px #3c3b3b;
+    font-family: system-ui;
+
+}
+#hero-btn{
+
+    background-color: white;
+    color:#0A2647;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;
+    box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.5) inset;
+
+
+}
+
+
+#hero-btn:hover{
+    transform: translateY(5px);
+    box-shadow:  0px 10px 20px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+#hero-btn:focus {
+    outline:0;
+    box-shadow: none;
+};
+
+
+
+
+
+.display-5{
+    color: white; 
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9,0 3px 0 #bbb, 0 4px 0 #b90 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);
+}    
+
+#aboutBody{
+    color: #656363;
+    font-weight: 400;
+    font-family: system-ui;
+      
+}
+
+
+
+#footerEdit{
+    background-color: #0A2647;
+}
+
+#footerContent{
+    font-family: 'Righteous';
+    color: white;
+}
+  
+
+#h-menu{
+    background-color: white;
+}
+
+.navbar-toggler-icon{
+color: #aaa;}
+
+#loginBtn:focus {
+    outline:0;
+    box-shadow: none;};
+

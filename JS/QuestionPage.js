@@ -1,14 +1,18 @@
-
 /* start time */
+
+let clockTime = "";
+let clock;
+let quizDuration = 60 * 1;
 
 function startTimer(duration, display) {
 
     let timer = duration;
-    let minutes
+    let minutes;
     let seconds;
 
 
     clock = setInterval(function () {
+
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -22,37 +26,17 @@ function startTimer(duration, display) {
             display.textContent = minutes + ":" + seconds;
             clockTime = minutes + ":" + seconds;
 
-            // Click the Submit button by forcing the user.
-            // changeResult(result, 5, 0, clockTime);
-            document.getElementById("stop").click();
+
+            StopTimer();
             clearInterval(clock);
+
         }
     }, 1000);
 }
 
-let clockTime = "";
-let clock;
-let quizDuration = 60 * 0.1;
-let stopbtn;
-
-stopbtn = document.getElementById('stop');
 display = document.getElementById('time');
 
-// startTimer(quizDuration, display);
-
-
-stopbtn.addEventListener('click', function () {
-    clearInterval(clock);
-    clockTime = display.textContent;
-    console.log(clockTime);
-
-    // Click the Submit button by the user.
-    document.getElementById("stop").click();
-});
-
-function goToResultPage() {
-    window.location.href = '../Pages/ResultPage.html';
-}
+startTimer(quizDuration, display);
 
 /* end time */
 
@@ -125,113 +109,153 @@ class Questions {
     static getAnswersFromLocalStorage() {
         return JSON.parse(localStorage.arrQuestions);
     }
-
-    static getResults(Counter) {
-        if (Counter <= 2) 
-            return "Pass";
-        return "Fail";
-    }
 }
 
 let user = JSON.parse(sessionStorage.UserSession);
 
 
-let counterQuestion = 1;
+let counterQuestion = 0;
+let score = 0;
+
 let counterNumber = 0;
 let counterCorrectAnswer = 0;
 
 
 const circles = document.querySelectorAll(".circle");
-const SubmitButton = document.getElementById("stop");
-const nextQuestion = document.getElementById("next");
-SubmitButton.style.display = "none";
 circles[counterNumber].classList.add("active");
 
-
+const nextQuestion = document.getElementById("next");
 
 let arrQuestions = Questions.getQuestions(user.examType);
 Questions.setAnswersInLocalStorage(arrQuestions);
 
-const questionForm = document.getElementById("questionForm");
-let answersofUser = [];
-
-questionForm.addEventListener("submit",  event => {
-
-    let userAnswer = event.target.answers.value;
-    answersofUser.push(userAnswer);
-    localStorage.setItem("UserAnswers", answersofUser);
-    if (userAnswer === '') {
-        alert('You must choose an answer');
-        return;
-    }
-        
-    event.preventDefault();
-
-    let quizQuestion = Questions.getAnswersFromLocalStorage();
-    
-    // if (quizQuestion[counterQuestion-1].correctAnswer === userAnswer)
-    //     console.log(counterCorrectAnswer++);
-
-    innerTextInElement (counterQuestion-1, quizQuestion);
-
-    console.log(quizQuestion[counterQuestion-1], userAnswer, counterQuestion);
-
-    if (counterNumber >= 4) {
-        SubmitButton.style.display = "inline-block";
-        nextQuestion.style.display = "none";
-        return;
-    }
-    else {
-        nextQuestion.style.display = "inline-block";
-        SubmitButton.style.display = "none";
-    }
-    
-    counterQuestion++;
-    counterNumber++;
-
-    circles[counterNumber].classList.remove("active");
-    circles[counterNumber].classList.add("active");
-});
-
-function innerTextInElement (counter, quizQuestion) {
+function loadQuiz () {
+    const questions = arrQuestions[counterQuestion];
 
     let question = document.getElementById("question");
     let choiceA = document.getElementById("answerA");
     let choiceB = document.getElementById("answerB");
     let choiceC = document.getElementById("answerC");
     
-    question.textContent = quizQuestion[counter].question;
-    choiceA.textContent = quizQuestion[counter].a;
-    choiceB.textContent = quizQuestion[counter].b;
-    choiceC.textContent = quizQuestion[counter].c;
-} 
-
-window.addEventListener("load", (event) => {
-    innerTextInElement(0, arrQuestions);
-});
-
-
-console.log(answersofUser);
-
-class ExamResult {
-    constructor ( QuestionsId, Questions, status, counterCorrectAnswers) {
-        this.QuestionsId = QuestionsId;
-        this.Questions = Questions;
-        this.status = status;
-        this.counterCorrectAnswers = counterCorrectAnswers;
-    }
-
-    static getStatus(){
-        
-    }
+    question.textContent = questions.question;
+    choiceA.textContent = questions.a;
+    choiceB.textContent = questions.b;
+    choiceC.textContent = questions.c;
 }
 
-// let savedAnswers = Questions.getQuestions("html");
-// let numofCorrectAnswers = 0;
-// for(let i = 0; i < savedAnswers.length; i++){
-//    if( sessionStorage.getItem("UserAnswers")[i] === savedAnswers[i].correctAnswer);
-//     numofCorrectAnswers++;
-// }
+function getSelected () {
+    const answersElement = document.querySelectorAll(".input");
 
+    let answer = undefined;
 
-// console.log(numofCorrectAnswers);
+    answersElement.forEach( (answerElement) => {
+        if (answerElement.checked) {
+            answer = answerElement;
+        }
+    });
+
+    return answer;
+}
+
+loadQuiz ();
+
+let arrAnswers = [];
+
+nextQuestion.addEventListener("click",  event => {
+
+    event.preventDefault();
+
+    const answer = getSelected();
+
+    let answerValue = answer.value;
+
+    if (answer) {
+        
+        if (answer.id === arrQuestions[counterQuestion].correctAnswer) {
+            
+            if(answerValue === 'a') {
+                arrAnswers.push(
+                    {id: arrQuestions[counterQuestion].id,
+                    question: arrQuestions[counterQuestion].question,
+                    UserAnswer: arrQuestions[counterQuestion].a, status: true
+                });
+            }
+            else if (answerValue === 'b') {
+                arrAnswers.push(
+                    {id: arrQuestions[counterQuestion].id,
+                    question: arrQuestions[counterQuestion].question,
+                    UserAnswer: arrQuestions[counterQuestion].b, status: true
+                });
+            }
+            else if (answerValue === 'c') {
+                arrAnswers.push(
+                    {id: arrQuestions[counterQuestion].id,
+                    question: arrQuestions[counterQuestion].question,
+                    UserAnswer: arrQuestions[counterQuestion].c, status: true
+                });
+            }
+        }
+        else {
+
+            if(answerValue === 'a') {
+                arrAnswers.push(
+                    {id: arrQuestions[counterQuestion].id,
+                    question: arrQuestions[counterQuestion].question,
+                    UserAnswer: arrQuestions[counterQuestion].a, status: false
+                });
+            }
+            else if (answerValue === 'b') {
+                arrAnswers.push(
+                    {id: arrQuestions[counterQuestion].id,
+                    question: arrQuestions[counterQuestion].question,
+                    UserAnswer: arrQuestions[counterQuestion].b, status: false
+                });
+            }
+            else if (answerValue === 'c') {
+                arrAnswers.push(
+                    {id: arrQuestions[counterQuestion].id,
+                    question: arrQuestions[counterQuestion].question,
+                    UserAnswer: arrQuestions[counterQuestion].c, status: false
+                });
+            }
+        }
+        
+        
+        counterQuestion++;
+
+        if (counterQuestion < arrQuestions.length) {
+            loadQuiz();
+        }
+        else {
+            StopTimer();
+        }
+    }
+
+    counterNumber++;
+
+    circles[counterNumber].classList.remove("active");
+    circles[counterNumber].classList.add("active");
+});
+
+function StopTimer(){
+
+    let user_results = {result: '', correctAnswer: 0, incorrectAnswer: 0};
+
+    arrAnswers.forEach( element => {
+        if(element.status)
+            user_results.correctAnswer++
+        else
+            user_results.incorrectAnswer++
+    });
+
+    if (user_results.correctAnswer >= 3)
+        user_results.result = "pass";
+    else
+        user_results.result = "fail";
+
+    sessionStorage.setItem('UserInformations', JSON.stringify(arrAnswers));
+    sessionStorage.setItem('UserInformationsResult', JSON.stringify(user_results));
+
+    clearInterval(clock);
+    window.location.href = '../Pages/ResultPage.html'; 
+}

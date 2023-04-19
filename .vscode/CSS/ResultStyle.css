@@ -1,0 +1,156 @@
+:root {
+  --first-color: #0A2647;
+  --second-color: #2C74B3;
+  --backgroungImgColor: #4D47C3;
+  --White-color: #fff;
+}
+/* start nav */
+
+.h-menu {
+  background-color: var(--second-color);
+}
+
+.nav-edit-color{
+  background-color: #0A2647;
+  font-family: 'Righteous';
+  box-shadow: inset 0px -11px 8px -10px #000000;
+}
+
+
+.nav-edit{
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-edit:hover {
+  color: var(--second-color);
+}
+
+
+.loginBtn{
+  color: white;
+  background-color: var(--second-color);
+  border: 1px solid var(--second-color);
+  transition: background-color 0.5s;
+}
+
+.loginBtn:hover{
+  color: white;
+  background-color: var(--backgroungImgColor);
+  
+}
+
+
+#loginBtn{
+  color: white;
+  background-color: #2C74B3;
+  border: 1px solid rgba(255, 255, 255, 0.819);
+  transition: background-color 1s, border 1s;
+}
+
+
+  #loginBtn:hover{
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.114);
+  background-color: #0a264768;
+  
+  }
+
+  .nav-edit-color{
+      background-color: #0A2647;
+      
+      font-family: 'Righteous';
+  }
+/* end nav */
+
+
+#res {
+  margin-top: 3rem;
+}
+
+
+#result{
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+  0 2px 0 #c9c9c9,
+  0 3px 0 #bbb,
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+
+
+#resultTable{
+  border-collapse:separate; 
+  border-spacing: 0 1em;
+  font-weight: bold;
+  border-radius: 4%;
+}
+
+#resultTable td {
+  background-color: rgb(255, 255, 255);
+  text-align: start;
+  padding: 20px;
+
+  box-shadow: 0 0 7px grey;
+
+
+}
+
+#resultTable th{
+  background-color: rgba(255, 255, 255, 0.51);
+  text-align: start;
+
+  box-shadow: 0 0 7px grey;
+
+}
+
+
+
+#res {
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  
+}
+
+#hero{
+  background-color: #395d00;
+  background-image: url(../images/crissxcross.png);
+    box-shadow: 0 0 11px;
+}
+
+#resultButton{
+  color: white;
+  background-color: #81b928;
+  border: 1px solid rgba(255, 255, 255, 0.819);
+}
+
+#R{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-shadow: 0 2px 0 #807c7c;
+}
+
+
+#footerEdit{
+  background-color: #0A2647;
+  box-shadow: inset 0px 11px 8px -10px #000000;
+}
+
+#footerContent{
+  font-family: 'Righteous';
+  color: white;
+}

@@ -1,0 +1,220 @@
+:root {
+    --first-color: #0A2647;
+    --second-color: #2C74B3;
+    --backgroungImgColor: #0A2647;
+    --White-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--White-color);
+    background-image: url(../images/Background-SignUp.png);
+    background-repeat: no-repeat;
+    font-family: system-ui;
+    background-position: 31% 70%;
+    background-attachment: fixed;
+}
+
+.error-Massage {
+    color: rgb(241, 4, 4);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: start;
+    margin-left: 3rem;
+    margin-top: -0.2rem;
+}
+
+/* start hero section */
+
+
+.main {
+    height: calc(100vh - 100px);
+}
+
+.hero-text {
+    padding-bottom: 150px;
+}
+
+.hero-text h2 {
+    font-weight: 900;
+    overflow-y: hidden;
+    color: var(--second-color);
+}
+
+.hero-text h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    overflow-y: hidden;
+}
+
+.hero-text p {
+    font-weight: 700;
+}
+
+.link-register {
+    font-weight: 900;
+    color: var(--second-color);
+    text-shadow: 0px 0px 15px var(--first-color);
+    transition: color 0.5s;
+}
+
+.link-register:hover {
+    color: #0A2647;
+}
+
+.form-control {
+    width: 370px;
+    height: 62px;
+    border-radius: 8px;
+    display: block;
+    margin-top: 30px;
+    max-width: 100%;
+    border: 2px solid #1f14ee66;
+}
+
+.form-control:focus {
+    box-shadow: 0px 0px 10px #fff0;
+    border-color: var(--backgroungImgColor);
+    
+}
+
+.btn {
+    background-color: var(--first-color);
+    color: var(--White-color);
+    width: 370px;
+    height: 50px;
+    max-width: 100%;
+}
+
+.btn:hover {
+    background-color: #0A2647;
+}
+
+
+.span-word {
+    color: var(--first-color);
+    font-size: xxx-large;
+}
+
+.input-section-signIn, .input-section-signUp {
+
+    border-radius: 20px;
+    background-color: #0a264716;
+    backdrop-filter: blur(5px);
+    width: 400px;
+}
+
+.input-section-signIn {
+    padding: 100px 0px 100px 0;
+}
+
+.input-section-signUp {
+    padding: 35px 0px 35px 0;
+}
+
+/* end hero section */
+
+/* start nav */
+
+.h-menu {
+    background-color: var(--second-color);
+}
+
+.nav-edit-color{
+    background-color: #0A2647;
+    box-shadow: inset 0px -11px 8px -10px #000000;
+    font-family: 'Righteous';
+}
+
+.nav-edit{
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-edit:hover {
+    color: var(--second-color);
+}
+
+.svg-icon{
+    color: var(--second-color);
+}
+
+.loginBtn{
+    color: white;
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    transition: background-color 0.5s;
+}
+
+.loginBtn:hover{
+    color: white;
+    background-color: var(--backgroungImgColor);
+}
+
+/* end nav */
+
+@media only screen and (max-width: 768px) {
+
+    .hero-text {
+        padding-bottom: 0px;
+    }
+    .error-Massage{
+        
+        margin-left: 6rem;
+    }
+
+    #form .error-Massage{
+        margin-top: -0.2rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 850px) {
+
+    .btn {
+        background-color: var(--first-color);
+        color: var(--White-color);
+        width: 100px;
+        height: 50px;
+        max-width: 100%;
+    }
+
+    .form-control {
+        width: 300px;
+        height: 62px;
+        border-radius: 8px;
+        display: block;
+        margin-top: 30px;
+        max-width: 100%;
+        border: 2px solid #1f14ee66;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .btn {
+        background-color: var(--first-color);
+        color: var(--White-color);
+        width: 100px;
+        height: 50px;
+        max-width: 100%;
+    }
+
+    .form-control {
+        width: 200px;
+        height: 62px;
+        border-radius: 8px;
+        display: block;
+        margin-top: 30px;
+        max-width: 100%;
+        border: 2px solid #1f14ee66;
+    }
+}

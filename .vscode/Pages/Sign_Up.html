@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/SignUpStyle.css">
+    
+    <title>SignUp</title>
+</head>
+<body>
+
+
+    <header class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg nav-edit-color">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html" id="logo"><img src="../images/LogoQuizTopia.png" alt="LOGO" width="200"></a>
+                <button  class="navbar-toggler h-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"  aria-label="Toggle navigation" style="background-color: white;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link mx-5 nav-edit" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-door-fill mt-n5" viewBox="0 0 16 16" style="vertical-align: sub;">
+                                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                              </svg> Home</a> 
+                        </li>
+                            <a href="../index.html" class="nav-link mx-5 nav-edit" aria-current="page">About Us</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link mx-5 nav-edit" aria-current="page">Contact Us</a> 
+                        </li>
+                    </ul>   
+                </div>           
+            </nav>
+        </div>
+    </header>  
+
+    <main class="main row justify-content-center align-items-center">
+        <section class="contener-sing-in row justify-content-center align-items-center me-0">
+            <section class="hero-text  text-center  col-8 col-lg-5 col-md-6 col-sm-8" >
+                <div class="maintext">
+                    <h2><span class="span-word">Sign Up</span> to</h2>
+                    <h3><span class="span-word">QuizTopia</span></h3>
+                    <p>I have an account <a href="../Pages/Sign_In.html" class="link-register">Sign in here !</a></p>
+                </div>
+            </section>
+
+            <section class="hero-form-sing-in text-center col-10 col-lg-5 col-md-6 col-sm-8 col-8 ">
+
+                
+                <form id="formSignUp" class="form">
+                    <div  class="input-section-signUp">
+
+                        <div class="row justify-content-center">
+                            <input class="form-control mt-3" id="email" type="email" name="email" autofocus placeholder="What's your email?">
+                            <span class="error-Massage ml-3" id="warningEmail"></span>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <input class="form-control mt-3" id="userName" type="text" name="userName" placeholder="Choose User name">
+                            <span class="error-Massage" id="warningUserName"></span>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <select required class="form-select form-control mt-3" id="examType" name="examType">
+                                <option value="false" selected>Chosse Exam type</option>  <!-- disabled -->
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="javascript">Javascript</option>
+                            </select>
+                            <span class="error-Massage" id="warningExam"></span>
+                        </div>
+
+                        <div class="row form justify-content-center">
+                            <input class="form-control mt-3" id="password" type="password" name="password" placeholder="Write strong password">
+                            <span class="error-Massage" id="warningPassword"></span>
+                        </div>
+
+                        <div class="row form justify-content-center">
+                            <input class="form-control mt-3 mb-2" id="confirmPassword" type="password" name="confirmPassword" placeholder="Confrim Password">
+                            <span class="error-Massage" id="warningConfirmPassword"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn loginBtn">Great job, join us now</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    
+    <script src="../JS/Sign_InUpPages.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>AOS.init();</script>
+    
+<body>
+<html>
